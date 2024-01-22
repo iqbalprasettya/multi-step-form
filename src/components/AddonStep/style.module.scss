@@ -1,0 +1,64 @@
+@import "../../styles/base.scss";
+
+.form {
+  margin-top: 30px;
+  @include col;
+  gap: 20px;
+  .addon {
+    @include col;
+    gap: 20px;
+    .addon-item {
+      @include row;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px;
+      border: 2px solid $light-gray;
+      border-radius: 6px;
+      @include apply-at-lg-size {
+        width: 450px;
+      }
+      @include apply-at-md-size {
+        gap: 10px;
+        padding: 10px;
+      }
+      .addon-text {
+        @include row;
+        gap: 20px;
+        h4 {
+          font-size: 18px;
+          @include apply-at-md-size {
+            font-size: 14px;
+          }
+        }
+        p {
+          font-size: 14px;
+          @include apply-at-md-size {
+            font-size: 10px;
+          }
+        }
+      }
+      .price p {
+        color: $light-gray;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+      }
+    }
+  }
+  .toggle {
+    @include row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: $magnolia;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    .switch-year {
+      margin: 0;
+    }
+    .yearly {
+      color: $cool-gray;
+    }
+  }
+}
