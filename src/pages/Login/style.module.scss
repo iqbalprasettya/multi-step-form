@@ -55,7 +55,7 @@ body {
         p {
           color: $light-gray;
         }
-        span:first-child {
+        .indicator {
           border: 2px solid $light-blue;
           padding: 10px 17px;
           border-radius: 50%;
@@ -64,6 +64,11 @@ body {
           @include apply-at-md-size {
             padding: 5px 12px;
           }
+        }
+        .active {
+          border: 2px solid $light-blue;
+          background-color: $light-blue;
+          color: $marine-blue;
         }
         span:last-child {
           @include col;
@@ -108,6 +113,48 @@ body {
         }
         .next-btn {
           background-color: $purplish-blue;
+          color: $white;
+          border: none;
+          padding: 15px 20px;
+          border-radius: 10px;
+        }
+        @include apply-at-md-size {
+          @include row;
+          justify-content: space-between;
+          position: fixed;
+          bottom: 0px;
+          background-color: $white;
+          width: 100%;
+          padding: 10px;
+          .prev-btn {
+            background-color: transparent;
+            color: $cool-gray;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+          }
+          .next-btn {
+            background-color: $marine-blue;
+            color: $white;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+          }
+        }
+      }
+      .btn-submite {
+        text-align: right;
+        @include row;
+        justify-content: right;
+        .prev-btn {
+          background-color: transparent;
+          color: $cool-gray;
+          border: none;
+          padding: 15px 20px;
+          border-radius: 6px;
+        }
+        .next-btn {
+          background-color: $marine-blue;
           color: $white;
           border: none;
           padding: 15px 20px;
